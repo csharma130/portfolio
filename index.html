@@ -406,7 +406,7 @@
       color: var(--text);
       margin-bottom: 24px;
     }
-    .contact-left h2 span { color: var(--accent); font-style: italic; }
+    .contact-left h2 span { color: var(--accent); font-style: normal; }
     .contact-left p { font-size: 13px; color: var(--mid); line-height: 1.8; }
     .contact-links { display: flex; flex-direction: column; gap: 2px; margin-top: 40px; }
     .contact-link {
@@ -516,44 +516,38 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products in Greater Los Angeles Area, working at the intersection of biological indicator manufacturing, process validation, and quality systems under <strong>21 CFR Part 820 (QMSR)</strong> and <strong>ISO 13485</strong>.
+            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products (ASP), currently based in the Greater Los Angeles Area, driving the continuous improvement and full sustainment of biological indicator manufacturing operations within a quality management framework governed by <strong>21 CFR Part 820 (QMSR)</strong> and <strong>ISO 13485</strong>.
           </p>
           <p>
-            My work spans full IQ/OQ/PQ validation lifecycles, nonconformance investigations, VAVE initiatives, and cross-functional project leadership across manufacturing and process development.
+            My ambition is to work on medical technology that pushes the boundaries of what's possible — building devices and solutions that are not only technically rigorous, but meaningful enough to improve the lives of as many people as possible.
           </p>
           <p>
-            Outside of engineering: I build music in Ableton Live, experiment with electronics and Arduino, and explore how systems — whether hardware, business, or social — interact, succeed, and fail.
+            Outside of my professional career: I produce music in Ableton Live, stay committed to fitness, and find myself drawn to understanding how systems — whether hardware, business, or social — interact, succeed, and fail.
           </p>
         </div>
         <div class="about-skills reveal">
           <h3>Core Engineering</h3>
           <div class="skill-tags">
-            <span class="tag">IQ / OQ / PQ Validation</span>
+            <span class="tag accent">Design Verification</span>
+            <span class="tag accent">Characterization Studies</span>
+            <span class="tag accent">IQ / OQ / PQ Validation</span>
             <span class="tag accent">21 CFR Part 820 (QMSR)</span>
             <span class="tag accent">ISO 13485</span>
             <span class="tag">Nonconformance Investigation</span>
-            <span class="tag">Design Verification</span>
             <span class="tag">Material Selection</span>
-            <span class="tag">DOE / OVAT</span>
-            <span class="tag">VAVE</span>
-            <span class="tag">GMP Manufacturing</span>
-            <span class="tag">Characterization Studies</span>
+            <span class="tag">Project Management</span>
           </div>
           <h3>Tools & Technical</h3>
           <div class="skill-tags">
             <span class="tag accent">SolidWorks</span>
             <span class="tag accent">Minitab</span>
             <span class="tag">Arduino / Electronics</span>
-            <span class="tag">Python (learning)</span>
-            <span class="tag">EtQ / MES</span>
             <span class="tag">Microsoft Suite</span>
-          </div>
-          <h3>Domains</h3>
-          <div class="skill-tags">
-            <span class="tag">Biological Indicators</span>
-            <span class="tag">Sterilization</span>
-            <span class="tag">Medical Devices</span>
-            <span class="tag">Process Development</span>
+            <span class="tag">Rapid Prototyping</span>
+            <span class="tag">Embedded Systems</span>
+            <span class="tag">Machining</span>
+            <span class="tag">Injection Molding</span>
+            <span class="tag">Technical Writing</span>
           </div>
         </div>
       </div>
@@ -631,9 +625,10 @@
             <div class="project-img-placeholder">[ Add Project Image ]</div>
           </div>
           <div class="project-num">02</div>
-          <div class="project-title">Biological Indicator Recharacterization</div>
+          <div class="project-title">New Process Recharacterization</div>
           <p class="project-desc">
-            Designed and executed a recharacterization study for biological indicator products, establishing new critical process parameters and acceptance criteria following formulation adjustments. Managed statistical analysis via Minitab and authored validation documentation.
+            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months following a new production line launch, 33% of lots produced either flagged or failed — driven by one or more samples out of 12 falling below a specification requiring concentration to be no less than 50% of the mean of all samples within the lot.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Designed and executed a recharacterization study to identify and resolve the root cause of concentration variability, establishing new critical process parameters and acceptance criteria. Managed statistical analysis via Minitab and authored full validation documentation.
           </p>
           <div class="project-tags">
             <span class="tag">Characterization Studies</span>
@@ -663,7 +658,35 @@
           <div class="project-outcome">↗ Ongoing · Personal R&D</div>
         </div>
 
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <!-- REPLACE WITH YOUR IMAGE: <img src="your-image.jpg" alt="Autoclave Rack"> -->
+            <div class="project-img-placeholder">[ Add Project Image ]</div>
+          </div>
+          <div class="project-num">04</div>
+          <div class="project-title">Upgraded Autoclave Rack</div>
+          <p class="project-desc">
+            <strong style="color:var(--text);">Problem Statement:</strong> An existing autoclave cycle was rendered non-operational due to bottles tipping within the original rack design, limiting the number of viable use cases and creating a recurring bottleneck in production throughput.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Designed and implemented an upgraded autoclave rack to resolve instability issues and expand cycle compatibility. The new design increased bottle retention and positional stability across multiple cycle configurations, restoring full operability to the affected cycle and broadening the rack's overall use cases within the manufacturing environment.
+          </p>
+          <div class="project-tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">Design Verification</span>
+            <span class="tag">GMP</span>
+            <span class="tag">Manufacturing</span>
+          </div>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">How?:</strong> Began by characterizing design constraints through precise measurement of the existing autoclave rack dimensions using a high-fidelity ruler. Using a legacy rack — no longer sold by the original manufacturer but still physically available — as the design reference, I measured hole diameters and center-to-center spacing using calipers, catalogued the total hole count, and calculated available surface area to ensure adequate steam penetration. All findings were translated into a new design in SolidWorks, where I incorporated properly sized structural beams to eliminate the beam deflection observed in the legacy rack. The final design was sent to a third-party vendor for machining in stainless steel and subsequently passivated to meet material and cleanliness requirements for use in a GMP environment. Design verification was performed by mounting thermocouples at the same positions used during the original autoclave validation. To ensure worst-case coverage, the most challenging cycle was selected — the one that drives the autoclave to its highest temperature, with the slowest exhaust time and longest exposure duration — then confirming that temperatures at each thermocouple location remained within specification as defined by the original validation protocol.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Results:</strong> Increased autoclave usage cases by <strong style="color:var(--accent);">20%</strong> and eliminated beam deflection by <strong style="color:var(--accent);">100%</strong>.
+          </p>
+          <div class="project-outcome">↗ Capital Equipment Improvement · ASP</div>
+        </div>
+
         <!-- ADD MORE PROJECT CARDS ABOVE THIS COMMENT -->
+
 
 
       </div>
@@ -680,11 +703,17 @@
       <div class="edu-grid">
         <div class="edu-card reveal">
           <div class="edu-degree">B.S. Biomedical Engineering</div>
-          <div class="edu-school" style="color:var(--mid); font-size:11px; margin-bottom:4px; letter-spacing:0.05em;">Specialization in Medical Devices</div>
-          <div class="edu-school">University of California, Davis</div>
-          <div class="edu-year">2022</div>
+          <div class="edu-school">University of California, Davis &nbsp;·&nbsp; 2022</div>
+          <div style="font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin: 8px 0 16px;">Specialization in Medical Devices</div>
           <div class="edu-notes">
-            Senior design capstone in medical device development. Coursework in biomechanics, materials science, physiology, and engineering design.
+            <div style="margin-bottom:10px; font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase;">Relevant Coursework</div>
+            <ul style="list-style:none;">
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Biomechanics, Materials Science & Physiology</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Circuitry & Electronics</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Coding — Python & MATLAB</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Thermodynamics & Mechanical Engineering Fundamentals</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Medical Device Design & Engineering Design Controls</li>
+            </ul>
           </div>
         </div>
         <div class="edu-card reveal">
