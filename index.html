@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chandrish Malakapalli — Engineering Portfolio</title>
+  <title>Chandrish Sharma — Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&display=swap" rel="stylesheet">
   <style>
@@ -13,8 +13,8 @@
       --bg: #0a0a0a;
       --surface: #111111;
       --border: #1e1e1e;
-      --accent: #c8f542;
-      --accent2: #42c8f5;
+      --accent: #42c8f5;
+      --accent2: #c8f542;
       --text: #e8e4dc;
       --muted: #555;
       --mid: #888;
@@ -91,7 +91,7 @@
       color: var(--text);
       margin-bottom: 8px;
     }
-    .hero-name span { color: var(--accent); font-style: italic; }
+    .hero-name span { color: var(--text); font-style: normal; }
     .hero-title {
       font-family: 'Fraunces', serif;
       font-size: clamp(20px, 2.5vw, 32px);
@@ -306,6 +306,31 @@
       transition: transform 0.3s;
     }
     .project-card:hover::before { transform: scaleX(1); }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      background: var(--border);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .project-img-placeholder {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
     .project-num {
       font-size: 48px;
       font-family: 'Fraunces', serif;
@@ -439,7 +464,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">CM</div>
+    <div class="nav-logo">CS</div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -454,11 +479,11 @@
     <div class="bg-grid"></div>
     <div class="hero-grid">
       <div>
-        <div class="hero-label">// Manufacturing & R&D Engineer</div>
-        <h1 class="hero-name">Chandrish<br><span>Malakapalli</span></h1>
-        <div class="hero-title">Medical Device Engineer<br>transitioning into R&D</div>
+        <div class="hero-label">// Medical Device Engineer</div>
+        <h1 class="hero-name">Chandrish<br><span>Sharma</span></h1>
+        <div class="hero-title">Medical Device Engineer</div>
         <p class="hero-desc">
-          3+ years driving validation, process development, and characterization studies in FDA-regulated medical device environments. Passionate about building things that matter — from biological indicators to hardware prototypes.
+          Medical device engineer with 3 years of experience in medical device development and regulated manufacturing; specializing in characterization, design verification, and equipment validation. Proven ability to lead engineering studies and cost-savings initiatives end-to-end within a GMP/FDA-regulated environment. Passionate about translating engineering rigor into product-level impact, with a long-term focus on contributing to medical device R&D and early-stage product development.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn">View Projects</a>
@@ -468,12 +493,15 @@
       <div class="hero-stats">
         <div class="stat-block reveal">
           <div class="stat-num">3+</div>
-          <div class="stat-label">Years in GMP / FDA-Regulated Environments</div>
+          <div class="stat-label">Years of experience in medical device development and regulated manufacturing, with experience in:</div>
+          <ul style="list-style:none; margin-top:14px;">
+            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Designing parts in SolidWorks</li>
+            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Statistical analysis utilizing Minitab to drive data-based process improvements</li>
+            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Standard Operating Procedures, Work Instructions, Manufacturing Procedures, Device History Records, and Bill of Material revisions</li>
+            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Nonconformance root cause investigations</li>
+          </ul>
         </div>
-        <div class="stat-block reveal">
-          <div class="stat-num">IQ<br>OQ<br>PQ</div>
-          <div class="stat-label">Full Validation Lifecycle Experience</div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -488,23 +516,24 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products in Irvine, CA, working at the intersection of biological indicator manufacturing, process validation, and quality systems under <strong>21 CFR Part 820</strong> and <strong>ISO 13485</strong>.
+            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products in Greater Los Angeles Area, working at the intersection of biological indicator manufacturing, process validation, and quality systems under <strong>21 CFR Part 820 (QMSR)</strong> and <strong>ISO 13485</strong>.
           </p>
           <p>
-            My work spans full IQ/OQ/PQ validation lifecycles, nonconformance investigations, VAVE initiatives, and cross-functional project leadership. I'm actively pursuing a transition into <strong>R&D engineering</strong>, where I can combine my process development depth with hands-on hardware and product design work.
+            My work spans full IQ/OQ/PQ validation lifecycles, nonconformance investigations, VAVE initiatives, and cross-functional project leadership across manufacturing and process development.
           </p>
           <p>
-            Outside of engineering: I build music in Ableton Live, experiment with electronics and Arduino, and explore how systems — whether biological, electrical, or social — interact and fail.
+            Outside of engineering: I build music in Ableton Live, experiment with electronics and Arduino, and explore how systems — whether hardware, business, or social — interact, succeed, and fail.
           </p>
         </div>
         <div class="about-skills reveal">
           <h3>Core Engineering</h3>
           <div class="skill-tags">
-            <span class="tag accent">IQ / OQ / PQ Validation</span>
-            <span class="tag accent">21 CFR Part 820</span>
+            <span class="tag">IQ / OQ / PQ Validation</span>
+            <span class="tag accent">21 CFR Part 820 (QMSR)</span>
             <span class="tag accent">ISO 13485</span>
             <span class="tag">Nonconformance Investigation</span>
-            <span class="tag">CAPA</span>
+            <span class="tag">Design Verification</span>
+            <span class="tag">Material Selection</span>
             <span class="tag">DOE / OVAT</span>
             <span class="tag">VAVE</span>
             <span class="tag">GMP Manufacturing</span>
@@ -512,8 +541,8 @@
           </div>
           <h3>Tools & Technical</h3>
           <div class="skill-tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">Minitab</span>
+            <span class="tag accent">SolidWorks</span>
+            <span class="tag accent">Minitab</span>
             <span class="tag">Arduino / Electronics</span>
             <span class="tag">Python (learning)</span>
             <span class="tag">EtQ / MES</span>
@@ -543,7 +572,7 @@
         <div class="exp-item reveal">
           <div class="exp-meta">
             <div class="exp-period">2022 — Present</div>
-            <div class="exp-company">Advanced Sterilization Products · Irvine, CA</div>
+            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
           </div>
           <div>
             <div class="exp-title">Manufacturing Engineer II</div>
@@ -551,7 +580,7 @@
               Lead validation activities, process characterization, and cross-functional engineering projects in a GMP biological indicator manufacturing environment.
             </p>
             <ul class="exp-bullets">
-              <li>Executed IQ/OQ/PQ validation protocols for manufacturing equipment and processes, ensuring regulatory compliance with 21 CFR Part 820 and ISO 13485</li>
+              <li>Executed IQ/OQ/PQ validation protocols for manufacturing equipment and processes, ensuring regulatory compliance with 21 CFR Part 820 (QMSR) and ISO 13485</li>
               <li>Led nonconformance investigations with root cause analysis and CAPA development, reducing repeat NCs through systemic process controls</li>
               <li>Drove characterization studies for biological indicator products, establishing critical process parameters and acceptance criteria</li>
               <li>Identified and implemented VAVE initiatives resulting in measurable cost and cycle time reductions</li>
@@ -576,65 +605,6 @@
       </div>
       <div class="projects-grid">
 
-        <div class="project-card reveal">
-          <div class="project-num">01</div>
-          <div class="project-title">Catheter Senior Design Project</div>
-          <p class="project-desc">
-            Led development of a catheter device concept as part of UC Davis Biomedical Engineering senior design program. Covered design controls, material selection, prototype fabrication, and verification testing — early exposure to medical device product development processes.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Medical Device Design</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">Design Controls</span>
-            <span class="tag">UC Davis</span>
-          </div>
-          <div class="project-outcome">↗ Senior Design Capstone · UC Davis BME</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">02</div>
-          <div class="project-title">Biological Indicator Recharacterization</div>
-          <p class="project-desc">
-            Designed and executed a recharacterization study for biological indicator products, establishing new critical process parameters and acceptance criteria following formulation adjustments. Managed statistical analysis via Minitab and authored validation documentation.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Characterization Studies</span>
-            <span class="tag">DOE</span>
-            <span class="tag">Minitab</span>
-            <span class="tag">GMP</span>
-          </div>
-          <div class="project-outcome">↗ Process Development · ASP</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">03</div>
-          <div class="project-title">Arduino Electronics Exploration</div>
-          <p class="project-desc">
-            Hands-on independent learning project covering digital I/O, PWM signal generation, serial communication, and breadboard circuit design with Arduino. Building foundational hardware prototyping skills to complement R&D engineering transition.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Arduino</span>
-            <span class="tag">Electronics</span>
-            <span class="tag">PWM</span>
-            <span class="tag">Hardware Prototyping</span>
-          </div>
-          <div class="project-outcome">↗ Ongoing · Personal R&D</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-num">04</div>
-          <div class="project-title">Portfolio Website</div>
-          <p class="project-desc">
-            Designed and deployed this portfolio website from scratch — single-file HTML/CSS/JS with a dark industrial aesthetic, deployed via Vercel. Demonstrates initiative in personal branding and self-directed technical projects alongside engineering work.
-          </p>
-          <div class="project-tags">
-            <span class="tag">HTML / CSS / JS</span>
-            <span class="tag">Vercel</span>
-            <span class="tag">Web Design</span>
-          </div>
-          <div class="project-outcome">↗ Live · chandrish.vercel.app</div>
-        </div>
-
         <!-- ADD MORE PROJECT CARDS ABOVE THIS COMMENT -->
 
       </div>
@@ -651,10 +621,11 @@
       <div class="edu-grid">
         <div class="edu-card reveal">
           <div class="edu-degree">B.S. Biomedical Engineering</div>
+          <div class="edu-school" style="color:var(--mid); font-size:11px; margin-bottom:4px; letter-spacing:0.05em;">Specialization in Medical Devices</div>
           <div class="edu-school">University of California, Davis</div>
           <div class="edu-year">2022</div>
           <div class="edu-notes">
-            Senior design capstone in medical device development. Coursework in biomechanics, materials science, physiology, and engineering design. Foundation for medical device manufacturing and R&D career.
+            Senior design capstone in medical device development. Coursework in biomechanics, materials science, physiology, and engineering design.
           </div>
         </div>
         <div class="edu-card reveal">
@@ -662,7 +633,13 @@
           <div class="edu-school">Professional Development</div>
           <div class="edu-year">Ongoing</div>
           <div class="edu-notes">
-            21 CFR Part 820 Quality Systems · ISO 13485 Medical Devices · GMP Manufacturing Practices · Statistical Process Control · Exploring California Real Estate Salesperson License (135-hr pre-licensing)
+            <div style="margin-bottom:6px; font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase;">Issued by Pathwise</div>
+            <ul style="list-style:none; margin-top:4px;">
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Technical Writing Principles</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Root Cause Investigations</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Writing Standard Operating Procedures</li>
+              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Documenting Investigations</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -675,25 +652,18 @@
       <div class="contact-left reveal">
         <h2>Let's<br><span>connect.</span></h2>
         <p>
-          I'm actively exploring R&D and senior manufacturing engineering roles, particularly in the Bay Area medtech space. Open to new opportunities, collaborations, and conversations.
+          I'm actively exploring engineering roles in the medtech space. Open to new opportunities, collaborations, and conversations.
         </p>
         <div style="margin-top:32px; font-size:12px; color:var(--muted);">
-          Based in Irvine, CA · Targeting Bay Area
         </div>
       </div>
       <div class="reveal">
         <div class="contact-links">
-          <a href="mailto:chandrish@email.com" class="contact-link">
-            chandrish@email.com <span>↗</span>
+          <a href="mailto:csharma20000@gmail.com" class="contact-link">
+            csharma20000@gmail.com <span>↗</span>
           </a>
-          <a href="https://linkedin.com/in/chandrish-malakapalli" target="_blank" class="contact-link">
+          <a href="https://linkedin.com/in/chandrish-sharma" target="_blank" class="contact-link">
             LinkedIn <span>↗</span>
-          </a>
-          <a href="https://github.com/chandrish" target="_blank" class="contact-link">
-            GitHub <span>↗</span>
-          </a>
-          <a href="/resume.pdf" class="contact-link">
-            Download Resume <span>↓</span>
           </a>
         </div>
       </div>
@@ -702,9 +672,9 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Chandrish Malakapalli</span>
-    <span>Manufacturing Engineer II → R&D</span>
-    <span>Irvine, CA</span>
+    <span>© 2025 Chandrish Sharma</span>
+    <span>Medical Device Engineer</span>
+    
   </footer>
 
   <script>
