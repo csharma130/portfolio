@@ -68,8 +68,8 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr;
+      gap: 0px;
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
@@ -193,8 +193,8 @@
     #about { background: var(--surface); }
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr;
+      gap: 0px;
     }
     .about-text p {
       color: var(--mid);
@@ -393,8 +393,8 @@
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr;
+      gap: 0px;
       align-items: start;
     }
     .contact-left h2 {
@@ -467,8 +467,8 @@
     <div class="nav-logo">CS</div>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
@@ -489,21 +489,9 @@
           <a href="#contact" class="btn btn-ghost">Get In Touch</a>
         </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat-block reveal">
-          <div class="stat-num">3+</div>
-          <div class="stat-label">Years of experience in medical device development and regulated manufacturing, with experience in:</div>
-          <ul style="list-style:none; margin-top:14px;">
-            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Designing parts in SolidWorks</li>
-            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Statistical analysis utilizing Minitab to drive data-based process improvements</li>
-            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Standard Operating Procedures, Work Instructions, Manufacturing Procedures, Device History Records, and Bill of Material revisions</li>
-            <li style="font-size:11px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Nonconformance root cause investigations</li>
-          </ul>
-        </div>
-
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ABOUT -->
   <section id="about">
@@ -558,42 +546,6 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <span class="section-num">02 //</span>
-        <h2 class="section-title">Experience</h2>
-      </div>
-      <div class="exp-list">
-
-        <div class="exp-item reveal">
-          <div class="exp-meta">
-            <div class="exp-period">2022 — Present</div>
-            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
-          </div>
-          <div>
-            <div class="exp-title">Manufacturing Engineer II</div>
-            <p class="exp-desc">
-              Lead validation activities, process characterization, and cross-functional engineering projects in a GMP biological indicator manufacturing environment.
-            </p>
-            <ul class="exp-bullets">
-              <li>Executed IQ/OQ/PQ validation protocols for manufacturing equipment and processes, ensuring regulatory compliance with 21 CFR Part 820 (QMSR) and ISO 13485</li>
-              <li>Led nonconformance investigations with root cause analysis and CAPA development, reducing repeat NCs through systemic process controls</li>
-              <li>Drove characterization studies for biological indicator products, establishing critical process parameters and acceptance criteria</li>
-              <li>Identified and implemented VAVE initiatives resulting in measurable cost and cycle time reductions</li>
-              <li>Collaborated cross-functionally with Quality, R&D, and Regulatory teams to support product lifecycle activities</li>
-              <li>Promoted from Manufacturing Engineer I within 18 months based on technical performance and project leadership</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- ADD MORE EXPERIENCE ENTRIES BELOW THIS COMMENT -->
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-inner">
       <div class="section-header reveal">
@@ -609,9 +561,13 @@
             <div class="project-img-placeholder">[ Add Project Image ]</div>
           </div>
           <div class="project-num">01</div>
-          <div class="project-title">Catheter Senior Design Project</div>
+          <div class="project-title">Neonatal Surfactant Delivery Device</div>
           <p class="project-desc">
-            Led development of a catheter device concept as part of UC Davis Biomedical Engineering senior design program. Covered design controls, material selection, prototype fabrication, and verification testing — early exposure to medical device product development processes.
+            <strong style="color:var(--text);">Problem Statement:</strong> Physicians at the UC Davis Medical Center identified that the surfactant administration tools currently used on neonatal patients impose excessive mechanical stress on the tracheal tissue and lack the maneuverability required to navigate the narrow and delicate anatomy of the neonatal airway — creating a clinical need for a less traumatic, more controllable delivery solution.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Led development of a neonatal surfactant delivery catheter as part of the UC Davis Biomedical Engineering senior design program.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">How?:</strong> The process began with a hands-on observation alongside a physician to directly understand their clinical concerns. From there, the team developed a survey to capture structured user needs data, and conducted a thorough state-of-the-art review of existing devices — evaluating competing solutions across dimensions such as cost, dimensions, materials, intended users, and commercial availability. Multiple design concepts were generated and evaluated before converging on a single direction. The team then worked through material selection, manufacturing method considerations, and developed a prototype incorporating physician-recommended features including enhanced maneuverability, depth visibility markers, and a softer durometer to reduce tracheal trauma. My primary contributions were in <strong style="color:var(--text);">FMEA</strong> and <strong style="color:var(--text);">V&V testing</strong> — identifying failure modes and their potential clinical impact, and designing and executing verification and validation tests to assess whether the prototype met its intended design requirements.
           </p>
           <div class="project-tags">
             <span class="tag">Medical Device Design</span>
@@ -630,14 +586,20 @@
           <div class="project-num">02</div>
           <div class="project-title">New Process Recharacterization</div>
           <p class="project-desc">
-            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months following a new production line launch, 33% of lots produced either flagged or failed — driven by one or more samples out of 12 falling below a specification requiring concentration to be no less than 50% of the mean of all samples within the lot.<br><br>
-            <strong style="color:var(--text);">What Was Done:</strong> Designed and executed a recharacterization study to identify and resolve the root cause of concentration variability, establishing new critical process parameters and acceptance criteria. Managed statistical analysis via Minitab and authored full validation documentation.
+            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months of a new production line launch, 33% of lots either failed or were flagged — driven by individual samples exhibiting a biological concentration at or below half that of the overall lot, a critical deviation from acceptable uniformity thresholds.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Led a thorough, multi-year root cause analysis investigating 20 distinct process variables — including, but not limited to, impeller design, mixing speed, dispense rate, and positional instability.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">How?:</strong> For each variable, I authored traceable, explicitly defined engineering tests in a lab notebook, executed them in a controlled manner — typically isolating one variable at a time — and submitted samples to QA for results. Upon receiving results, I performed statistical analysis in Minitab to determine, through data-driven conclusions, whether the variable under investigation was a contributing factor to the observed failures. As each test was unique, the preparation required varied considerably. Some tests required me to design and fabricate positional fixtures using rapid prototyping, while others required collecting aliquots in test tubes at incremental time intervals to capture process behavior at each stage. This methodical approach ultimately revealed that the failures were driven by multiple root causes rather than a single variable — a finding that would not have been possible without the systematic, one-variable-at-a-time investigative approach.
           </p>
           <div class="project-tags">
             <span class="tag">Characterization Studies</span>
-            <span class="tag">DOE</span>
+            <span class="tag">OVAT / DOE</span>
             <span class="tag">Minitab</span>
-            <span class="tag">GMP</span>
+            <span class="tag">Test Fixture Development</span>
+            <span class="tag">Rapid Prototyping</span>
+            <span class="tag">Good Documentation Practices</span>
+            <span class="tag">Project Management</span>
           </div>
           <div class="project-outcome">↗ Process Development · ASP</div>
         </div>
@@ -673,24 +635,58 @@
             <strong style="color:var(--text);">Problem Statement:</strong> An existing autoclave cycle was rendered non-operational due to bottles tipping within the original rack design, limiting the number of viable use cases and creating a recurring bottleneck in production throughput.<br><br>
             <strong style="color:var(--text);">What Was Done:</strong> Designed and implemented an upgraded autoclave rack to resolve instability issues and expand cycle compatibility. The new design increased bottle retention and positional stability across multiple cycle configurations, restoring full operability to the affected cycle and broadening the rack's overall use cases within the manufacturing environment.
           </p>
-          <div class="project-tags">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">Design Verification</span>
-            <span class="tag">GMP</span>
-            <span class="tag">Manufacturing</span>
-          </div>
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">How?:</strong> Began by characterizing design constraints through precise measurement of the existing autoclave rack dimensions using a high-fidelity ruler. Using a legacy rack — no longer sold by the original manufacturer but still physically available — as the design reference, I measured hole diameters and center-to-center spacing using calipers, catalogued the total hole count, and calculated available surface area to ensure adequate steam penetration. All findings were translated into a new design in SolidWorks, where I incorporated properly sized structural beams to eliminate the beam deflection observed in the legacy rack. The final design was sent to a third-party vendor for machining in stainless steel and subsequently passivated to meet material and cleanliness requirements for use in a GMP environment. Design verification was performed by mounting thermocouples at the same positions used during the original autoclave validation. To ensure worst-case coverage, the most challenging cycle was selected — the one that drives the autoclave to its highest temperature, with the slowest exhaust time and longest exposure duration — then confirming that temperatures at each thermocouple location remained within specification as defined by the original validation protocol.
           </p>
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">Results:</strong> Increased autoclave usage cases by <strong style="color:var(--accent);">20%</strong> and eliminated beam deflection by <strong style="color:var(--accent);">100%</strong>.
           </p>
+          <div class="project-tags" style="margin-top:16px;">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">Design Verification</span>
+          </div>
           <div class="project-outcome">↗ Capital Equipment Improvement · ASP</div>
         </div>
 
         <!-- ADD MORE PROJECT CARDS ABOVE THIS COMMENT -->
 
 
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">02 //</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-period">2022 — Present</div>
+            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
+          </div>
+          <div>
+            <div class="exp-title">Manufacturing Engineer II</div>
+            <p class="exp-desc">
+              Lead validation activities, process characterization, and cross-functional engineering projects in a GMP biological indicator manufacturing environment.
+            </p>
+            <ul class="exp-bullets">
+              <li>Executed IQ/OQ/PQ validation protocols for manufacturing equipment and processes, ensuring regulatory compliance with 21 CFR Part 820 (QMSR) and ISO 13485</li>
+              <li>Led nonconformance investigations with root cause analysis and CAPA development, reducing repeat NCs through systemic process controls</li>
+              <li>Drove characterization studies for biological indicator products, establishing critical process parameters and acceptance criteria</li>
+              <li>Identified and implemented VAVE initiatives resulting in measurable cost and cycle time reductions</li>
+              <li>Collaborated cross-functionally with Quality, R&D, and Regulatory teams to support product lifecycle activities</li>
+              <li>Promoted from Manufacturing Engineer I within 18 months based on technical performance and project leadership</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ADD MORE EXPERIENCE ENTRIES BELOW THIS COMMENT -->
 
       </div>
     </div>
