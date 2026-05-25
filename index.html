@@ -10,14 +10,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --border: #1e1e1e;
-      --accent: #42c8f5;
-      --accent2: #c8f542;
-      --text: #e8e4dc;
-      --muted: #555;
-      --mid: #888;
+      --bg: #3d4a2e;
+      --surface: #4a5938;
+      --border: #d4b800;
+      --accent: #c17f24;
+      --accent2: #e8c96a;
+      --text: #f2eedb;
+      --muted: #7a8a5a;
+      --mid: #b8c990;
     }
 
     html { scroll-behavior: smooth; }
@@ -68,8 +68,8 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
@@ -103,7 +103,7 @@
     .hero-desc {
       color: var(--mid);
       font-size: 13px;
-      max-width: 440px;
+      max-width: 100%;
       margin-bottom: 48px;
       line-height: 1.8;
     }
@@ -193,8 +193,8 @@
     #about { background: var(--surface); }
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
     }
     .about-text p {
       color: var(--mid);
@@ -393,8 +393,8 @@
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: start;
     }
     .contact-left h2 {
@@ -479,8 +479,10 @@
     <div class="bg-grid"></div>
     <div class="hero-grid">
       <div>
-                <h1 class="hero-name">Chandrish<br><span>Sharma</span></h1>
+        <h1 class="hero-name">Chandrish<br><span>Sharma</span></h1>
         <div class="hero-title">Medical Device Engineer</div>
+      </div>
+      <div style="display:flex; flex-direction:column; justify-content:center;">
         <p class="hero-desc">
           Medical device engineer with 3 years of experience in medical device development and regulated manufacturing; specializing in characterization, design verification, and equipment validation. Proven ability to lead engineering studies and cost-savings initiatives end-to-end within a GMP/FDA-regulated environment. Passionate about translating engineering rigor into product-level impact, with a long-term focus on contributing to medical device R&D and early-stage product development.
         </p>
@@ -539,6 +541,7 @@
             <span class="tag accent">21 CFR Part 820 (QMSR)</span>
             <span class="tag accent">ISO 13485</span>
             <span class="tag accent">ISO 11138</span>
+            <span class="tag accent">ISO 10555</span>
           </div>
         </div>
       </div>
@@ -563,17 +566,20 @@
           <div class="project-num">01</div>
           <div class="project-title">Neonatal Surfactant Delivery Device</div>
           <p class="project-desc">
-            <strong style="color:var(--text);">Problem Statement:</strong> Physicians at the UC Davis Medical Center identified that the surfactant administration tools currently used on neonatal patients impose excessive mechanical stress on the tracheal tissue and lack the maneuverability required to navigate the narrow and delicate anatomy of the neonatal airway — creating a clinical need for a less traumatic, more controllable delivery solution.<br><br>
+            <strong style="color:var(--text);">Problem Statement:</strong> Physicians at the UC Davis Medical Center identified that the tools used to perform Less Invasive Surfactant Administration (LISA) on neonatal patients impose excessive mechanical stress on the tracheal tissue and lack the maneuverability required to navigate the narrow and delicate anatomy of the neonatal airway — creating a clinical need for a less traumatic, more controllable delivery solution.<br><br>
             <strong style="color:var(--text);">What Was Done:</strong> Led development of a neonatal surfactant delivery catheter as part of the UC Davis Biomedical Engineering senior design program.
           </p>
           <p class="project-desc" style="margin-top:16px;">
-            <strong style="color:var(--text);">How?:</strong> The process began with a hands-on observation alongside a physician to directly understand their clinical concerns. From there, the team developed a survey to capture structured user needs data, and conducted a thorough state-of-the-art review of existing devices — evaluating competing solutions across dimensions such as cost, dimensions, materials, intended users, and commercial availability. Multiple design concepts were generated and evaluated before converging on a single direction. The team then worked through material selection, manufacturing method considerations, and developed a prototype incorporating physician-recommended features including enhanced maneuverability, depth visibility markers, and a softer durometer to reduce tracheal trauma. My primary contributions were in <strong style="color:var(--text);">FMEA</strong> and <strong style="color:var(--text);">V&V testing</strong> — identifying failure modes and their potential clinical impact, and designing and executing verification and validation tests to assess whether the prototype met its intended design requirements.
+            <strong style="color:var(--text);">How?:</strong> The process began with a hands-on observation alongside a physician to directly understand their clinical concerns. From there, the team developed a survey to capture structured user needs data, and conducted a thorough state-of-the-art review of existing devices — evaluating competing solutions across dimensions such as cost, dimensions, materials, intended users, and commercial availability. Multiple design concepts were generated and evaluated before converging on a single direction. The team then worked through material selection, manufacturing method considerations, and developed a prototype incorporating physician-recommended features including enhanced maneuverability, depth visibility markers, and a softer durometer to reduce tracheal trauma. My primary contributions were in <strong style="color:var(--text);">FMEA</strong> and <strong style="color:var(--text);">V&V testing</strong> — identifying failure modes and their potential clinical impact, and designing and executing verification and validation tests to assess whether the prototype met its intended design requirements. As no ISO standard exists specifically for intratracheal catheters, V&V testing was developed by borrowing applicable testing requirements from <strong style="color:var(--text);">ISO 10555</strong> (intravascular catheters) as the closest relevant standard — a practical exercise in engineering judgment under regulatory ambiguity.
           </p>
           <div class="project-tags">
-            <span class="tag">Medical Device Design</span>
+            <span class="tag">V&V Testing</span>
+            <span class="tag">FMEA</span>
+            <span class="tag">Product Development</span>
             <span class="tag">Prototyping</span>
             <span class="tag">Design Controls</span>
-            <span class="tag">UC Davis</span>
+            <span class="tag">ISO 10555</span>
+            <span class="tag">FDA Waterfall Design Process</span>
           </div>
           <div class="project-outcome">↗ Senior Design Capstone · UC Davis BME</div>
         </div>
@@ -606,30 +612,10 @@
 
         <div class="project-card reveal">
           <div class="project-img">
-            <!-- REPLACE WITH YOUR IMAGE: <img src="your-image.jpg" alt="Arduino Project"> -->
-            <div class="project-img-placeholder">[ Add Project Image ]</div>
-          </div>
-          <div class="project-num">03</div>
-          <div class="project-title">Arduino Electronics Exploration</div>
-          <p class="project-desc">
-            Hands-on independent learning project covering digital I/O, PWM signal generation, serial communication, and breadboard circuit design with Arduino. Building foundational hardware prototyping skills.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Arduino</span>
-            <span class="tag">Electronics</span>
-            <span class="tag">PWM</span>
-            <span class="tag">Hardware Prototyping</span>
-          </div>
-          <div class="project-outcome">↗ Ongoing · Personal R&D</div>
-        </div>
-
-
-        <div class="project-card reveal">
-          <div class="project-img">
             <!-- REPLACE WITH YOUR IMAGE: <img src="your-image.jpg" alt="Autoclave Rack"> -->
             <div class="project-img-placeholder">[ Add Project Image ]</div>
           </div>
-          <div class="project-num">04</div>
+          <div class="project-num">03</div>
           <div class="project-title">Upgraded Autoclave Rack</div>
           <p class="project-desc">
             <strong style="color:var(--text);">Problem Statement:</strong> An existing autoclave cycle was rendered non-operational due to bottles tipping within the original rack design, limiting the number of viable use cases and creating a recurring bottleneck in production throughput.<br><br>
@@ -645,7 +631,27 @@
             <span class="tag">SolidWorks</span>
             <span class="tag">Design Verification</span>
           </div>
-          <div class="project-outcome">↗ Capital Equipment Improvement · ASP</div>
+          <div class="project-outcome">↗ Design Engineering & Verification · ASP</div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <!-- REPLACE WITH YOUR IMAGE: <img src="your-image.jpg" alt="Arduino Project"> -->
+            <div class="project-img-placeholder">[ Add Project Image ]</div>
+          </div>
+          <div class="project-num">04</div>
+          <div class="project-title">Arduino Electronics Exploration</div>
+          <p class="project-desc">
+            Hands-on independent learning project covering digital I/O, PWM signal generation, serial communication, and breadboard circuit design with Arduino. Building foundational hardware prototyping skills.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">Electronics</span>
+            <span class="tag">PWM</span>
+            <span class="tag">Hardware Prototyping</span>
+          </div>
+          <div class="project-outcome">↗ Ongoing · Personal R&D</div>
         </div>
 
         <!-- ADD MORE PROJECT CARDS ABOVE THIS COMMENT -->
@@ -667,7 +673,7 @@
 
         <div class="exp-item reveal">
           <div class="exp-meta">
-            <div class="exp-period">2022 — Present</div>
+            <div class="exp-period">April 2026 — Present</div>
             <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
           </div>
           <div>
@@ -676,12 +682,26 @@
               Lead validation activities, process characterization, and cross-functional engineering projects in a GMP biological indicator manufacturing environment.
             </p>
             <ul class="exp-bullets">
-              <li>Executed IQ/OQ/PQ validation protocols for manufacturing equipment and processes, ensuring regulatory compliance with 21 CFR Part 820 (QMSR) and ISO 13485</li>
-              <li>Led nonconformance investigations with root cause analysis and CAPA development, reducing repeat NCs through systemic process controls</li>
-              <li>Drove characterization studies for biological indicator products, establishing critical process parameters and acceptance criteria</li>
-              <li>Identified and implemented VAVE initiatives resulting in measurable cost and cycle time reductions</li>
-              <li>Collaborated cross-functionally with Quality, R&D, and Regulatory teams to support product lifecycle activities</li>
-              <li>Promoted from Manufacturing Engineer I within 18 months based on technical performance and project leadership</li>
+              <li><strong>Led 20 characterization studies on a deactivated production machine,</strong> stabilizing dispense system and improving tolerance stackup by 3D printing positional test fixtures from ABS, developing OVAT and DOE studies, managing multi-week testing, and conducting statistical analysis [normality testing, ANOVA, t-test, I-MR]. Projecting $250K in annual cost savings upon design transfer.</li>
+              <li><strong>Leading execution of characterization studies and engineering tasks</strong> for a new cleaning process, which would increase daily throughput by 200% and reduce scrap rate from 23.1% to 3.5% ($98K annual savings) through full material utilization.</li>
+              <li><strong>Serving as lead engineer for the biologics team:</strong> resolved critical equipment failures (sonicator, peristaltic pump, autoclaves) through hands-on troubleshooting and third-party vendor coordination, reducing production downtime and maintaining continuity through structured failure tracking and weekly GDP audits.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item reveal">
+          <div class="exp-meta">
+            <div class="exp-period">September 2023 — March 2026</div>
+            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
+          </div>
+          <div>
+            <div class="exp-title">Manufacturing Engineer I</div>
+            <ul class="exp-bullets">
+              <li><strong>Led an R&D VAVE initiative</strong> for consumables packaging tape, achieving a 75% reduction in lead time and $70K in annual savings by evaluating alternatives, conducting ISTA 2A/IATA DGR testing and releasing a comparative analysis report.</li>
+              <li><strong>Designed a new, passivated autoclave rack</strong> which increased usage cases by 20% and eliminated beam deflection by 100%. Conducted verification of design by simulating worst-case steam penetration scenario.</li>
+              <li><strong>Investigated 30+ manufacturing nonconformances under a regulated eQMS (21 CFR Part 820, ISO 13485),</strong> saving $100K in scrap and preventing multiple production shutdowns through cross-functional executions of planned deviations, 100% part inspection, sort/reworks, and product dispositions.</li>
+              <li><strong>Led executions of five IQ/OQ validation protocols</strong> using a Kaye Validator data acquisition system to qualify variable temperature and humidity assets, increasing maximum production capacity by 30%.</li>
+              <li><strong>Supported electromechanical biological indicator manufacturing</strong> by troubleshooting machine faults, performing robotic arm calibrations, and driving issue resolution through cross-functional production meetings.</li>
             </ul>
           </div>
         </div>
@@ -702,7 +722,7 @@
       <div class="edu-grid">
         <div class="edu-card reveal">
           <div class="edu-degree">B.S. Biomedical Engineering</div>
-          <div class="edu-school">University of California, Davis &nbsp;·&nbsp; 2022</div>
+          <div class="edu-school">University of California, Davis &nbsp;·&nbsp; 2023</div>
           <div style="font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin: 8px 0 16px;">Specialization in Medical Devices</div>
           <div class="edu-notes">
             <div style="margin-bottom:10px; font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase;">Relevant Coursework</div>
