@@ -610,13 +610,25 @@
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">Results:</strong> Currently in the design transfer phase. Projecting <strong style="color:var(--accent);">$250K</strong> in annual cost savings upon completion.
           </p>
-          <div class="project-outcome">↗ Process Development · ASP</div>
+          <div class="project-outcome">↗ Process Development · <span style="color:var(--accent);">Characterization</span> · ASP</div>
         </div>
 
         <div class="project-card reveal">
-          <div class="project-img">
-            <!-- REPLACE WITH YOUR IMAGE: <img src="your-image.jpg" alt="Autoclave Rack"> -->
-            <div class="project-img-placeholder">[ Add Project Image ]</div>
+          <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
+            <div class="slideshow" id="autoclave-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
+              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a;">
+            </div>
+            <button onclick="slideShow('autoclave-slides', -1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8592;</button>
+            <button onclick="slideShow('autoclave-slides', 1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8594;</button>
+            <div id="autoclave-dots" style="position:absolute;bottom:8px;width:100%;display:flex;justify-content:center;gap:6px;">
+              <span onclick="goToSlide('autoclave-slides','autoclave-dots',0)" style="width:8px;height:8px;border-radius:50%;background:var(--accent);cursor:pointer;"></span>
+              <span onclick="goToSlide('autoclave-slides','autoclave-dots',1)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
+              <span onclick="goToSlide('autoclave-slides','autoclave-dots',2)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
+              <span onclick="goToSlide('autoclave-slides','autoclave-dots',3)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
+            </div>
           </div>
           <div class="project-num">03</div>
           <div class="project-title">Upgraded Autoclave Rack</div>
@@ -788,6 +800,32 @@
   </footer>
 
   <script>
+
+    const slideshowIndexes = {};
+
+    function slideShow(id, dir) {
+      const el = document.getElementById(id);
+      const count = el.children.length;
+      slideshowIndexes[id] = ((slideshowIndexes[id] || 0) + dir + count) % count;
+      el.style.transform = `translateX(-${slideshowIndexes[id] * 100}%)`;
+      updateDots(id);
+    }
+
+    function goToSlide(id, dotsId, index) {
+      const el = document.getElementById(id);
+      slideshowIndexes[id] = index;
+      el.style.transform = `translateX(-${index * 100}%)`;
+      updateDots(id);
+    }
+
+    function updateDots(id) {
+      const dotsEl = document.getElementById(id.replace('-slides', '-dots'));
+      if (!dotsEl) return;
+      Array.from(dotsEl.children).forEach((dot, i) => {
+        dot.style.background = i === slideshowIndexes[id] ? 'var(--accent)' : 'var(--border)';
+      });
+    }
+
     // Intersection Observer for reveal animations
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
