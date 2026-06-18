@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chandrish Sharma — Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0a0a0a;
-      --surface: #111111;
-      --border: #1e1e1e;
-      --accent: #42c8f5;
-      --accent2: #42c8f5;
-      --text: #e8e4dc;
-      --muted: #555;
-      --mid: #888;
+      --bg: #f5f1e8;
+      --surface: #ece6d8;
+      --border: #d8d0bd;
+      --accent: #a3471f;
+      --accent2: #a3471f;
+      --text: #2b2620;
+      --muted: #a39c8a;
+      --mid: #6b6354;
     }
 
     html { scroll-behavior: smooth; }
@@ -25,7 +25,7 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Mono', monospace;
+      font-family: 'Inter', sans-serif;
       font-size: 14px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -36,14 +36,14 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 20px 48px;
-      background: rgba(10,10,10,0.85);
+      background: rgba(245,241,232,0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 20px;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--accent);
       letter-spacing: -0.5px;
     }
@@ -83,17 +83,17 @@
       margin-bottom: 24px;
     }
     .hero-name {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(52px, 6vw, 88px);
-      font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -2px;
+      font-family: 'Source Serif 4', serif;
+      font-size: clamp(64px, 7.5vw, 104px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -1px;
       color: var(--text);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
     .hero-name span { color: var(--text); font-style: normal; }
     .hero-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: clamp(20px, 2.5vw, 32px);
       font-weight: 300;
       color: var(--mid);
@@ -113,7 +113,7 @@
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 12px 28px;
-      font-family: 'DM Mono', monospace;
+      font-family: 'Inter', sans-serif;
       font-size: 12px;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -124,7 +124,7 @@
       transition: background 0.2s, color 0.2s;
       background: transparent;
     }
-    .btn:hover { background: var(--accent); color: #0a0a0a; }
+    .btn:hover { background: var(--accent); color: #f5f1e8; }
     .btn-ghost { border-color: var(--border); color: var(--mid); }
     .btn-ghost:hover { background: var(--surface); color: var(--text); }
 
@@ -141,9 +141,9 @@
     }
     .stat-block:first-child { border-bottom: none; }
     .stat-num {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 64px;
-      font-weight: 900;
+      font-weight: 700;
       color: var(--accent);
       line-height: 1;
       letter-spacing: -3px;
@@ -161,8 +161,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(200,245,66,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,245,66,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(43,38,32,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(43,38,32,0.03) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
     }
@@ -182,7 +182,7 @@
       letter-spacing: 0.15em;
     }
     .section-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: clamp(32px, 4vw, 52px);
       font-weight: 700;
       letter-spacing: -1px;
@@ -247,7 +247,7 @@
       letter-spacing: 0.05em;
     }
     .exp-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 22px;
       font-weight: 700;
       color: var(--text);
@@ -333,15 +333,15 @@
     }
     .project-num {
       font-size: 48px;
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
       color: var(--border);
       line-height: 1;
       margin-bottom: 20px;
       letter-spacing: -2px;
     }
     .project-title {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 24px;
       font-weight: 700;
       color: var(--text);
@@ -374,7 +374,7 @@
       padding: 40px;
     }
     .edu-degree {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: 22px;
       font-weight: 700;
       color: var(--text);
@@ -398,9 +398,9 @@
       align-items: start;
     }
     .contact-left h2 {
-      font-family: 'Fraunces', serif;
+      font-family: 'Source Serif 4', serif;
       font-size: clamp(36px, 4vw, 56px);
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: -2px;
       line-height: 0.95;
       color: var(--text);
@@ -512,7 +512,7 @@
       </div>
       <div style="display:flex; flex-direction:column; justify-content:center;">
         <p class="hero-desc">
-          Medical device engineer with 3 years of experience in regulated manufacturing and device development, specializing in characterization studies, design verification, and equipment validation. I have led engineering investigations and cost-savings initiatives end-to-end in GMP environments, and am driven by a long-term goal of contributing to early-stage medical device development where technical depth translates directly into patient impact.
+          Medical device engineer with 3 years of experience in medical device development and regulated manufacturing, specializing in characterization, design/process verification, and equipment/process validation. Proven ability to lead complex technical investigations, experimental studies, and process improvement initiatives that deliver measurable impact in regulated medical device environments. Passionate about advancing human health through innovative medical technologies and engineering solutions.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn">View Projects</a>
@@ -545,6 +545,8 @@
         <div class="about-skills reveal">
           <h3>Core Engineering</h3>
           <div class="skill-tags">
+            <span class="tag accent">Feasibility Studies</span>
+            <span class="tag accent">Root Cause Investigation</span>
             <span class="tag accent">Design Verification</span>
             <span class="tag accent">Characterization Studies</span>
             <span class="tag accent">IQ / OQ / PQ Validation</span>
@@ -552,11 +554,12 @@
             <span class="tag">Material Selection</span>
             <span class="tag">Project Management</span>
             <span class="tag">Engineering Change Order Processes</span>
+            <span class="tag">Ship Testing (ISTA, DOT)</span>
           </div>
           <h3>Tools & Technical</h3>
           <div class="skill-tags">
             <span class="tag accent">SolidWorks</span>
-            <span class="tag accent">Minitab</span>
+            <span class="tag accent">Statistical Analysis (Minitab)</span>
             <span class="tag">Embedded Systems</span>
             <span class="tag">Microsoft Suite</span>
             <span class="tag">Rapid Prototyping</span>
@@ -588,7 +591,7 @@
 
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
-            <img src="senior design poster.png" style="width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('senior design poster.png')">
+            <img src="senior design poster.png" style="width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('senior design poster.png')">
           </div>
           <div class="project-num">01</div>
           <div class="project-title">Neonatal Surfactant Delivery Device</div>
@@ -599,6 +602,12 @@
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">How?:</strong> The project started with a direct observation of the LISA procedure alongside a physician to understand the clinical pain points firsthand. From there, the team built a structured user needs survey, followed by a state-of-the-art review that benchmarked competing devices across cost, dimensions, materials, intended users, and market availability. After generating and narrowing down multiple design concepts, the team developed a prototype built around three physician-specified requirements: better maneuverability, depth visibility markers, and a softer durometer. Work spanned the full product development cycle, including material selection, manufacturing method evaluation, FMEA, and V&V testing. Since no ISO standard exists for intratracheal catheters specifically, testing requirements were adapted from <strong style="color:var(--text);">ISO 10555</strong> (intravascular catheters) as the closest applicable standard, which required deliberate engineering judgment in interpreting and applying those requirements to a different anatomical context.
           </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Iterations:</strong> The first prototype used a large French size and measured only 2.5 inches in length, making it too short and too difficult to maneuver within the airway. It also carried a durometer of 80, comparable to a leather belt, with no bend in the shaft at all. After several rounds of design iteration, the final version converged on a French size 5, in line with physician-specified needs, and a durometer of 32.5, closer to a mousepad and still within our 40 durometer ceiling. This version could bend and hold its shape without kinking, directly addressing the maneuverability concerns raised at the outset.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Testing:</strong> Instron tensile testing was used to evaluate how different coil patterns on the catheter shaft performed under load. A coil pattern with 10 turns per inch withstood roughly 52% more elongation before failure than a tighter pattern with 13 turns per inch, indicating that the looser coil configuration provided a meaningful strength advantage without compromising flexibility. Leak testing was also performed on the final design by injecting 10 mL of water through the catheter via syringe to confirm fluid containment under expected use conditions.
+          </p>
           <div class="project-tags">
             <span class="tag">V&V Testing</span>
             <span class="tag">FMEA</span>
@@ -608,15 +617,15 @@
             <span class="tag">ISO 10555</span>
             <span class="tag">FDA Waterfall Design Process</span>
           </div>
-          <div class="project-outcome">↗ Senior Design Capstone · UC Davis BME</div>
+          <div class="project-outcome">↗ Senior Design Capstone</div>
         </div>
 
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <div class="slideshow" id="rechar-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
-              <img src="unnamed.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('unnamed.png')">
-              <img src="unnamed-4.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('unnamed-4.png')">
-              <img src="3d printed tool.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('3d printed tool.png')">
+              <img src="unnamed.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('unnamed.png')">
+              <img src="unnamed-4.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('unnamed-4.png')">
+              <img src="3d printed tool.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('3d printed tool.png')">
             </div>
             <button onclick="slideShow('rechar-slides', -1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8592;</button>
             <button onclick="slideShow('rechar-slides', 1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8594;</button>
@@ -627,10 +636,10 @@
             </div>
           </div>
           <div class="project-num">02</div>
-          <div class="project-title">New Process Recharacterization</div>
+          <div class="project-title">New Process Recharacterization &amp; Process Revalidation</div>
           <p class="project-desc">
-            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months of a new production line launch, 33% of lots failed or were flagged. The failure criterion: any sample with a biological concentration at or below half the lot average. The failure rate pointed to a systemic process issue.<br><br>
-            <strong style="color:var(--text);">What Was Done:</strong> Conducted a multi-year root cause investigation covering 20 distinct process variables, including impeller design, mixing speed, dispense rate, and positional instability, among others.
+            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months of a new production line launch, 102 lots were produced — 33 of which either failed or were flagged for one of two biological concentration-related issues.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Conducted a multi-year root cause investigation covering 20 distinct process variables, including impeller design, mixing speed, dispense rate, and positional instability, among others. Variables were organized and prioritized using a 6M methodology (Man, Machine, Material, Method, Measurement, Mother Nature), which framed the full set of potential contributing factors and allowed testing to be sequenced by starting with the variables that were both most likely to be contributing causes and the most straightforward to investigate.
           </p>
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">How?:</strong> Each variable was tested individually. Before running a test, I wrote out the full test protocol in a lab notebook with traceable, explicitly defined steps. After execution, samples were submitted to QA and the results were analyzed in Minitab to determine whether that variable had a statistically meaningful effect on the failure mode. Test preparation varied significantly depending on the variable being studied. Some required designing and fabricating positional fixtures via rapid prototyping; others involved collecting timed aliquots in test tubes at incremental intervals to observe process behavior over time. The investigation ultimately revealed that the failures stemmed from multiple root causes working in combination, not a single variable. That finding would not have surfaced without the disciplined, one-variable-at-a-time approach.
@@ -647,15 +656,15 @@
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">Results:</strong> Currently in the design transfer phase. Projecting <strong style="color:var(--accent);">$250K</strong> in annual cost savings upon completion.
           </p>
-          <div class="project-outcome">↗ Process Development · <span style="color:var(--accent);">Characterization</span> · ASP</div>
+          <div class="project-outcome">↗ Process Development · <span style="color:var(--accent);">Characterization</span> · Process Validation</div>
         </div>
 
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <div class="slideshow" id="autoclave-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
-              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('autoclave1.png')">
-              <img src="autoclave2.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('autoclave2.png')">
-              <img src="autoclave3.png" style="min-width:100%; height:100%; object-fit:contain; background:#1a1a1a; cursor:zoom-in;" onclick="openLightbox('autoclave3.png')">
+              <img src="autoclave1.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('autoclave1.png')">
+              <img src="autoclave2.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('autoclave2.png')">
+              <img src="autoclave3.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('autoclave3.png')">
             </div>
             <button onclick="slideShow('autoclave-slides', -1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8592;</button>
             <button onclick="slideShow('autoclave-slides', 1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8594;</button>
@@ -681,7 +690,7 @@
             <span class="tag">SolidWorks</span>
             <span class="tag">Design Verification</span>
           </div>
-          <div class="project-outcome">↗ Design Engineering & Verification · ASP</div>
+          <div class="project-outcome">↗ Design Engineering & Verification</div>
         </div>
 
 
@@ -727,13 +736,10 @@
           </div>
           <div>
             <div class="exp-title">Manufacturing Engineer II</div>
-            <p class="exp-desc">
-              Leading characterization studies, equipment troubleshooting, and process engineering in a GMP biological indicator manufacturing environment.
-            </p>
             <ul class="exp-bullets">
-              <li><strong>Led 20 characterization studies on a deactivated production machine,</strong> stabilizing dispense system and improving tolerance stackup by 3D printing positional test fixtures from ABS, developing OVAT and DOE studies, managing multi-week testing, and conducting statistical analysis [normality testing, ANOVA, t-test, I-MR]. Projecting $250K in annual cost savings upon design transfer.</li>
-              <li><strong>Leading execution of characterization studies and engineering tasks</strong> for a new cleaning process, which would increase daily throughput by 200% and reduce scrap rate from 23.1% to 3.5% ($98K annual savings) through full material utilization.</li>
-              <li><strong>Serving as lead engineer for the biologics team:</strong> resolved critical equipment failures (sonicator, peristaltic pump, autoclaves) through hands-on troubleshooting and third-party vendor coordination, reducing production downtime and maintaining continuity through structured failure tracking and weekly GDP audits.</li>
+              <li><strong>Led 20 characterization studies on a two-year long root cause investigation on deactivated production machine,</strong> stabilizing electromechanical dispense system, improving tolerance stackup, and eliminating substrate drift by designing OVAT and DOE studies, 3D printing fixtures from ABS, managing multi-week testing, and conducting statistical analysis [normality testing, ANOVA, t-test, I-MR]. Projecting $250K in annual cost savings upon complete process validation.</li>
+              <li><strong>Leading cross functional team through execution of feasibility testing</strong> for a new cleaning process, which would increase daily throughput by 200% and reduce scrap rate from 23.1% to 3.5% ($98K annual savings) through full material utilization.</li>
+              <li><strong>Technical lead for the biologics team:</strong> resolved critical equipment failures (sonicator, peristaltic pump, autoclaves) through hands-on troubleshooting and third-party vendor coordination, reducing production downtime and maintaining continuity through structured failure tracking and weekly GDP audits.</li>
             </ul>
           </div>
         </div>
@@ -747,9 +753,9 @@
             <div class="exp-title">Manufacturing Engineer I</div>
             <ul class="exp-bullets">
               <li><strong>Led an R&D VAVE initiative</strong> for consumables packaging tape, achieving a 75% reduction in lead time and $70K in annual savings by evaluating alternatives, conducting ISTA 2A/IATA DGR testing and releasing a comparative analysis report.</li>
-              <li><strong>Designed a new, passivated autoclave rack</strong> which increased usage cases by 20% and eliminated beam deflection by 100%. Conducted verification of design by simulating worst-case steam penetration scenario.</li>
-              <li><strong>Investigated 30+ manufacturing nonconformances under a regulated eQMS (21 CFR Part 820, ISO 13485),</strong> saving $100K in scrap and preventing multiple production shutdowns through cross-functional executions of planned deviations, 100% part inspection, sort/reworks, and product dispositions.</li>
-              <li><strong>Led executions of five IQ/OQ validation protocols</strong> using a Kaye Validator data acquisition system to qualify variable temperature and humidity assets, increasing maximum production capacity by 30%.</li>
+              <li><strong>Designed and verified a new passivated autoclave rack, increasing usage cases by 20% and eliminating beam deflection.</strong> Performed worst-case steam penetration analysis and verification testing to ensure sterilization efficacy.</li>
+              <li><strong>Investigated 30+ manufacturing nonconformances under a regulated eQMS (21 CFR Part 820, ISO 13485),</strong> saving $100K in scrap and preventing multiple production shutdowns through cross-functional executions of planned deviations, heightened inspections, 100% part inspection, sort/reworks, and product dispositions.</li>
+              <li><strong>Led executions of five IQ/OQ equipment validation protocols</strong> using a Kaye Validator data acquisition system to qualify variable temperature and humidity assets, increasing maximum production capacity by 30%.</li>
               <li><strong>Supported electromechanical biological indicator manufacturing</strong> by troubleshooting machine faults, performing robotic arm calibrations, and driving issue resolution through cross-functional production meetings.</li>
             </ul>
           </div>
@@ -786,8 +792,6 @@
         </div>
         <div class="edu-card reveal">
           <div class="edu-degree">Certifications & Training</div>
-          <div class="edu-school">Professional Development</div>
-          <div class="edu-year">Ongoing</div>
           <div class="edu-notes">
             <div style="margin-bottom:6px; font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase;">Issued by Pathwise</div>
             <ul style="list-style:none; margin-top:4px;">
