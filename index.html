@@ -84,12 +84,12 @@
     }
     .hero-name {
       font-family: 'Source Serif 4', serif;
-      font-size: clamp(64px, 7.5vw, 104px);
+      font-size: clamp(52px, 6vw, 88px);
       font-weight: 700;
-      line-height: 0.95;
-      letter-spacing: -1px;
+      line-height: 0.92;
+      letter-spacing: -2px;
       color: var(--text);
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .hero-name span { color: var(--text); font-style: normal; }
     .hero-title {
@@ -495,9 +495,12 @@
     <div class="nav-logo">CS</div>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#personal-projects">Personal Projects</a>
+      <a href="#projects">Professional Projects</a>
+      <a href="#senior-design">Senior Design</a>
+      <a href="#experience">Professional Experience</a>
       <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -512,10 +515,10 @@
       </div>
       <div style="display:flex; flex-direction:column; justify-content:center;">
         <p class="hero-desc">
-          Medical device engineer with 3 years of experience in medical device development and regulated manufacturing, specializing in characterization, design/process verification, and equipment/process validation. Proven ability to lead complex technical investigations, experimental studies, and process improvement initiatives that deliver measurable impact in regulated medical device environments. Passionate about advancing human health through innovative medical technologies and engineering solutions.
+          Medical device engineer with 3 years of experience in regulated manufacturing and device development, specializing in characterization studies, design verification, and equipment validation. I have led engineering investigations and cost-savings initiatives end-to-end in GMP environments, and am driven by a long-term goal of contributing to early-stage medical device development where technical depth translates directly into patient impact.
         </p>
         <div class="hero-cta">
-          <a href="#projects" class="btn">View Projects</a>
+          
           <a href="#contact" class="btn btn-ghost">Get In Touch</a>
         </div>
       </div>
@@ -533,7 +536,7 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products (ASP), based in the Greater Los Angeles Area. My work focuses on the continuous improvement and sustainment of biological indicator manufacturing, operating within a quality management framework governed by <strong>21 CFR Part 820 (QMSR)</strong> and <strong>ISO 13485</strong>.
+            I'm a <strong>Manufacturing Engineer II</strong> at Advanced Sterilization Products (ASP), based in the Irvine, CA. My work focuses on the continuous improvement and sustainment of biological indicator manufacturing, operating within a quality management framework governed by <strong>21 CFR Part 820 (QMSR)</strong> and <strong>ISO 13485</strong>.
           </p>
           <p>
             My goal is to work on medical technology that genuinely moves the needle. I want to build devices that are technically sound and meaningful enough to make a real difference in people's lives.
@@ -545,8 +548,6 @@
         <div class="about-skills reveal">
           <h3>Core Engineering</h3>
           <div class="skill-tags">
-            <span class="tag accent">Feasibility Studies</span>
-            <span class="tag accent">Root Cause Investigation</span>
             <span class="tag accent">Design Verification</span>
             <span class="tag accent">Characterization Studies</span>
             <span class="tag accent">IQ / OQ / PQ Validation</span>
@@ -554,12 +555,11 @@
             <span class="tag">Material Selection</span>
             <span class="tag">Project Management</span>
             <span class="tag">Engineering Change Order Processes</span>
-            <span class="tag">Ship Testing (ISTA, DOT)</span>
           </div>
           <h3>Tools & Technical</h3>
           <div class="skill-tags">
             <span class="tag accent">SolidWorks</span>
-            <span class="tag accent">Statistical Analysis (Minitab)</span>
+            <span class="tag accent">Minitab</span>
             <span class="tag">Embedded Systems</span>
             <span class="tag">Microsoft Suite</span>
             <span class="tag">Rapid Prototyping</span>
@@ -579,47 +579,108 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="projects">
+  <!-- WORK PROJECTS -->
+  <section id="personal-projects" style="background:var(--surface);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">02 //</span>
+        <h2 class="section-title">Personal Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
+            <div class="slideshow" id="rccar-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
+              <img src="rc car picture.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('rc car picture.png')">
+              <video src="rc car demonstration.mp4" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:pointer;" controls></video>
+            </div>
+            <button onclick="slideShow('rccar-slides', -1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8592;</button>
+            <button onclick="slideShow('rccar-slides', 1)" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8594;</button>
+            <div id="rccar-dots" style="position:absolute;bottom:8px;width:100%;display:flex;justify-content:center;gap:6px;">
+              <span onclick="goToSlide('rccar-slides','rccar-dots',0)" style="width:8px;height:8px;border-radius:50%;background:var(--accent);cursor:pointer;"></span>
+              <span onclick="goToSlide('rccar-slides','rccar-dots',1)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
+            </div>
+          </div>
+          <div class="project-num">P1</div>
+          <div class="project-title">4-Motor Line-Following RC Car</div>
+          <p class="project-desc">
+            Built a 4-motor Arduino-based line-following robot. Configured power distribution across a microcontroller, L293D motor driver, and IR sensor array. Diagnosed and resolved hardware faults including wiring issues, voltage drop, and driver-library compatibility through systematic testing.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Key Engineering Challenges:</strong>
+          </p>
+          <p class="project-desc" style="margin-top:8px;">
+            <strong style="color:var(--text);">1.</strong> IR sensors were producing erratic, unstable readings that prevented consistent line detection. Wrote a dedicated test script to methodically evaluate each sensor individually, which allowed fine-tuning of sensitivity thresholds and precise sensor positioning. This process also revealed how to account for interference from ambient lighting and surface reflections, ensuring the sensors only responded to the intended line.
+          </p>
+          <p class="project-desc" style="margin-top:8px;">
+            <strong style="color:var(--text);">2.</strong> All four wheels were rotating in inconsistent directions. The root cause was improper motor wiring at the terminal blocks on the L293D motor driver. Rewiring the terminals to the correct configuration resolved the issue immediately and restored proper directional control across all four motors.
+          </p>
+          <p class="project-desc" style="margin-top:8px;">
+            <strong style="color:var(--text);">3.</strong> Motors were not receiving enough power to turn. The original power source did not account for the saturation voltage drop across the L293D motor driver, meaning the voltage available at the motors fell below the minimum needed for rotation. Increasing the supply voltage provided enough headroom to exceed the driver's saturation voltage, allowing the motors to operate correctly.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Components:</strong>
+          </p>
+          <ul style="list-style:none; margin-top:8px; margin-bottom:16px;">
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">DC Motors</strong> — hobbyist-recommended motors selected because the application only required simple rotational drive; no need for more complex servo or stepper motor control.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">L293D Motor Driver</strong> — capable of independently controlling all four DC motors, making it the right fit for a 4-motor drive configuration.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">Arduino Uno (Elegoo Dupe)</strong> — chosen over the official board for cost savings while retaining identical functionality for this application.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">IR Sensors</strong> — selected based on research confirming they were sufficient for line-following at this scale; a more expensive sensor offered no meaningful advantage for this use case.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">Cardboard Chassis</strong> — used as a resourceful first-iteration frame. A future iteration would use a PETG 3D printed chassis, as the cardboard sagged under the weight of the microcontroller and motor driver. PETG offers the rigidity needed to support the electronics while remaining lightweight and impact-resistant.</li>
+          </ul>
+          <div class="project-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">Embedded Systems</span>
+            <span class="tag">Motor Control</span>
+            <span class="tag">IR Sensors</span>
+            <span class="tag">Hardware Debugging</span>
+          </div>
+          <div class="project-outcome">&#8599; Completed &middot; Personal Build</div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
+            <video src="robotic arm servo test.mp4" style="width:100%; height:100%; object-fit:contain; background:#ece6d8;" controls></video>
+          </div>
+          <div class="project-num">P2</div>
+          <div class="project-title">4-DOF Robotic Arm</div>
+          <p class="project-desc">
+            Building a 4 degree-of-freedom robotic arm to develop hands-on hardware design, embedded systems, and mechanical prototyping skills. Currently in the mechanical design phase.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Components:</strong>
+          </p>
+          <ul style="list-style:none; margin-top:8px; margin-bottom:16px;">
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">Elegoo Arduino Mega</strong> — chosen over the official Arduino for cost savings while retaining identical functionality for the application.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">SG90 &amp; MG996R Servos</strong> — widely recommended hobbyist servos with well-documented torque and stall current specs, selected based on the torque requirements of each joint in the arm.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">5V/10A Power Distribution Block</strong> — rated to handle the worst-case power draw, calculated by summing the stall currents of all servos simultaneously.</li>
+            <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">5V/10A Screw Terminal Barrel Jack Adapter</strong> — used to couple the AC wall adapter to the power distribution block, matched to the same voltage and current rating to avoid a bottleneck in the power chain.</li>
+          </ul>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Key Engineering Challenges:</strong>
+          </p>
+          <p class="project-desc" style="margin-top:8px;">
+            <strong style="color:var(--text);">1.</strong> Sourcing compatible power components required significant research. The servos needed a power distribution block rated for the correct amperage and voltage, which took time to identify. This also required a barrel jack adapter to step down wall AC power to the DC voltage the servos needed, and a screw terminal barrel jack adapter to properly couple the AC adapter to the power distribution block — each component had to be verified for compatibility before the system could be powered safely.
+          </p>
+          <div class="project-tags">
+            <span class="tag">SolidWorks</span>
+            <span class="tag">Arduino</span>
+            <span class="tag">Servo Control</span>
+            <span class="tag">Rapid Prototyping</span>
+            <span class="tag">Embedded Systems</span>
+          </div>
+          <div class="project-outcome">&#8599; In Progress &middot; Personal Build</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK PROJECTS -->
+  <section id="projects" style="background:var(--bg);">
     <div class="section-inner">
       <div class="section-header reveal">
         <span class="section-num">03 //</span>
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">Professional Projects</h2>
       </div>
       <div class="projects-grid">
-
-
-        <div class="project-card reveal">
-          <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
-            <img src="senior design poster.png" style="width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('senior design poster.png')">
-          </div>
-          <div class="project-num">01</div>
-          <div class="project-title">Neonatal Surfactant Delivery Device</div>
-          <p class="project-desc">
-            <strong style="color:var(--text);">Problem Statement:</strong> Physicians at UC Davis Medical Center found that existing tools for Less Invasive Surfactant Administration (LISA) were too rigid and hard to maneuver in the neonatal airway, causing unnecessary tracheal trauma.<br><br>
-            <strong style="color:var(--text);">What Was Done:</strong> Led development of a neonatal surfactant delivery catheter as part of the UC Davis Biomedical Engineering senior design program.
-          </p>
-          <p class="project-desc" style="margin-top:16px;">
-            <strong style="color:var(--text);">How?:</strong> The project started with a direct observation of the LISA procedure alongside a physician to understand the clinical pain points firsthand. From there, the team built a structured user needs survey, followed by a state-of-the-art review that benchmarked competing devices across cost, dimensions, materials, intended users, and market availability. After generating and narrowing down multiple design concepts, the team developed a prototype built around three physician-specified requirements: better maneuverability, depth visibility markers, and a softer durometer. Work spanned the full product development cycle, including material selection, manufacturing method evaluation, FMEA, and V&V testing. Since no ISO standard exists for intratracheal catheters specifically, testing requirements were adapted from <strong style="color:var(--text);">ISO 10555</strong> (intravascular catheters) as the closest applicable standard, which required deliberate engineering judgment in interpreting and applying those requirements to a different anatomical context.
-          </p>
-          <p class="project-desc" style="margin-top:16px;">
-            <strong style="color:var(--text);">Iterations:</strong> The first prototype used a large French size and measured only 2.5 inches in length, making it too short and too difficult to maneuver within the airway. It also carried a durometer of 80, comparable to a leather belt, with no bend in the shaft at all. After several rounds of design iteration, the final version converged on a French size 5, in line with physician-specified needs, and a durometer of 32.5, closer to a mousepad and still within our 40 durometer ceiling. This version could bend and hold its shape without kinking, directly addressing the maneuverability concerns raised at the outset.
-          </p>
-          <p class="project-desc" style="margin-top:16px;">
-            <strong style="color:var(--text);">Testing:</strong> Instron tensile testing was used to evaluate how different coil patterns on the catheter shaft performed under load. A coil pattern with 10 turns per inch withstood roughly 52% more elongation before failure than a tighter pattern with 13 turns per inch, indicating that the looser coil configuration provided a meaningful strength advantage without compromising flexibility. Leak testing was also performed on the final design by injecting 10 mL of water through the catheter via syringe to confirm fluid containment under expected use conditions.
-          </p>
-          <div class="project-tags">
-            <span class="tag">V&V Testing</span>
-            <span class="tag">FMEA</span>
-            <span class="tag">Product Development</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">Design Controls</span>
-            <span class="tag">ISO 10555</span>
-            <span class="tag">FDA Waterfall Design Process</span>
-          </div>
-          <div class="project-outcome">↗ Senior Design Capstone</div>
-        </div>
-
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <div class="slideshow" id="rechar-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
@@ -635,11 +696,11 @@
               <span onclick="goToSlide('rechar-slides','rechar-dots',2)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
             </div>
           </div>
-          <div class="project-num">02</div>
-          <div class="project-title">New Process Recharacterization &amp; Process Revalidation</div>
+          <div class="project-num">01</div>
+          <div class="project-title">New Process Recharacterization</div>
           <p class="project-desc">
-            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months of a new production line launch, 102 lots were produced — 33 of which either failed or were flagged for one of two biological concentration-related issues.<br><br>
-            <strong style="color:var(--text);">What Was Done:</strong> Conducted a multi-year root cause investigation covering 20 distinct process variables, including impeller design, mixing speed, dispense rate, and positional instability, among others. Variables were organized and prioritized using a 6M methodology (Man, Machine, Material, Method, Measurement, Mother Nature), which framed the full set of potential contributing factors and allowed testing to be sequenced by starting with the variables that were both most likely to be contributing causes and the most straightforward to investigate.
+            <strong style="color:var(--text);">Problem Statement:</strong> Within the first three months of a new production line launch, 33% of lots failed or were flagged. The failure criterion: any sample with a biological concentration at or below half the lot average. The failure rate pointed to a systemic process issue.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Conducted a multi-year root cause investigation covering 20 distinct process variables, including impeller design, mixing speed, dispense rate, and positional instability, among others.
           </p>
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">How?:</strong> Each variable was tested individually. Before running a test, I wrote out the full test protocol in a lab notebook with traceable, explicitly defined steps. After execution, samples were submitted to QA and the results were analyzed in Minitab to determine whether that variable had a statistically meaningful effect on the failure mode. Test preparation varied significantly depending on the variable being studied. Some required designing and fabricating positional fixtures via rapid prototyping; others involved collecting timed aliquots in test tubes at incremental intervals to observe process behavior over time. The investigation ultimately revealed that the failures stemmed from multiple root causes working in combination, not a single variable. That finding would not have surfaced without the disciplined, one-variable-at-a-time approach.
@@ -656,9 +717,8 @@
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">Results:</strong> Currently in the design transfer phase. Projecting <strong style="color:var(--accent);">$250K</strong> in annual cost savings upon completion.
           </p>
-          <div class="project-outcome">↗ Process Development · <span style="color:var(--accent);">Characterization</span> · Process Validation</div>
+          <div class="project-outcome">↗ Process Development · <span style="color:var(--accent);">Characterization</span> · ASP</div>
         </div>
-
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <div class="slideshow" id="autoclave-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
@@ -674,7 +734,7 @@
               <span onclick="goToSlide('autoclave-slides','autoclave-dots',2)" style="width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;"></span>
             </div>
           </div>
-          <div class="project-num">03</div>
+          <div class="project-num">02</div>
           <div class="project-title">Upgraded Autoclave Rack</div>
           <p class="project-desc">
             <strong style="color:var(--text);">Problem Statement:</strong> Bottles tipping inside the original rack design rendered one autoclave cycle non-operational, eliminating it from production use entirely.<br><br>
@@ -690,32 +750,44 @@
             <span class="tag">SolidWorks</span>
             <span class="tag">Design Verification</span>
           </div>
-          <div class="project-outcome">↗ Design Engineering & Verification</div>
+          <div class="project-outcome">↗ Design Engineering & Verification · ASP</div>
         </div>
+      </div>
+    </div>
+  </section>
 
-
+  <!-- SENIOR DESIGN -->
+  <section id="senior-design" style="background:var(--surface);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">04 //</span>
+        <h2 class="section-title">Senior Design Project</h2>
+      </div>
+      <div class="projects-grid">
         <div class="project-card reveal">
-          <div class="project-img" style="display:flex; align-items:center; justify-content:center;">
-            <div class="project-img-placeholder">N/A</div>
+          <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
+            <img src="senior design poster.png" style="width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('senior design poster.png')">
           </div>
-          <div class="project-num">04</div>
-          <div class="project-title">Arduino Electronics Exploration</div>
+          <div class="project-num">01</div>
+          <div class="project-title">Neonatal Surfactant Delivery Device</div>
           <p class="project-desc">
-            Hands-on independent learning project covering digital I/O, PWM signal generation, serial communication, and breadboard circuit design with Arduino. Building foundational hardware prototyping skills.
+            <strong style="color:var(--text);">Problem Statement:</strong> Physicians at UC Davis Medical Center found that existing tools for Less Invasive Surfactant Administration (LISA) were too rigid and hard to maneuver in the neonatal airway, causing unnecessary tracheal trauma.<br><br>
+            <strong style="color:var(--text);">What Was Done:</strong> Led development of a neonatal surfactant delivery catheter as part of the UC Davis Biomedical Engineering senior design program.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">How?:</strong> The project started with a direct observation of the LISA procedure alongside a physician to understand the clinical pain points firsthand. From there, the team built a structured user needs survey, followed by a state-of-the-art review that benchmarked competing devices across cost, dimensions, materials, intended users, and market availability. After generating and narrowing down multiple design concepts, the team developed a prototype built around three physician-specified requirements: better maneuverability, depth visibility markers, and a softer durometer. Work spanned the full product development cycle, including material selection, manufacturing method evaluation, FMEA, and V&V testing. Since no ISO standard exists for intratracheal catheters specifically, testing requirements were adapted from <strong style="color:var(--text);">ISO 10555</strong> (intravascular catheters) as the closest applicable standard, which required deliberate engineering judgment in interpreting and applying those requirements to a different anatomical context.
           </p>
           <div class="project-tags">
-            <span class="tag">Arduino</span>
-            <span class="tag">Electronics</span>
-            <span class="tag">PWM</span>
-            <span class="tag">Hardware Prototyping</span>
+            <span class="tag">V&V Testing</span>
+            <span class="tag">FMEA</span>
+            <span class="tag">Product Development</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">Design Controls</span>
+            <span class="tag">ISO 10555</span>
+            <span class="tag">FDA Waterfall Design Process</span>
           </div>
-          <div class="project-outcome">↗ Ongoing · Personal R&D</div>
+          <div class="project-outcome">↗ Senior Design Capstone · UC Davis BME</div>
         </div>
-
-        <!-- ADD MORE PROJECT CARDS ABOVE THIS COMMENT -->
-
-
-
       </div>
     </div>
   </section>
@@ -724,40 +796,53 @@
   <section id="experience">
     <div class="section-inner">
       <div class="section-header reveal">
-        <span class="section-num">02 //</span>
-        <h2 class="section-title">Experience</h2>
+        <span class="section-num">05 //</span>
+        <h2 class="section-title">Professional Experience</h2>
       </div>
       <div class="exp-list">
 
         <div class="exp-item reveal">
           <div class="exp-meta">
             <div class="exp-period">April 2026 — Present</div>
-            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
+            <div class="exp-company">Advanced Sterilization Products · Irvine, CA</div>
           </div>
           <div>
             <div class="exp-title">Manufacturing Engineer II</div>
             <ul class="exp-bullets">
-              <li><strong>Led 20 characterization studies on a two-year long root cause investigation on deactivated production machine,</strong> stabilizing electromechanical dispense system, improving tolerance stackup, and eliminating substrate drift by designing OVAT and DOE studies, 3D printing fixtures from ABS, managing multi-week testing, and conducting statistical analysis [normality testing, ANOVA, t-test, I-MR]. Projecting $250K in annual cost savings upon complete process validation.</li>
-              <li><strong>Leading cross functional team through execution of feasibility testing</strong> for a new cleaning process, which would increase daily throughput by 200% and reduce scrap rate from 23.1% to 3.5% ($98K annual savings) through full material utilization.</li>
-              <li><strong>Technical lead for the biologics team:</strong> resolved critical equipment failures (sonicator, peristaltic pump, autoclaves) through hands-on troubleshooting and third-party vendor coordination, reducing production downtime and maintaining continuity through structured failure tracking and weekly GDP audits.</li>
-            </ul>
+              <li><strong>Led test method development and statistical analysis of 10+ cross-functional characterization studies on an electromechanical spore disc production machine failing for products with outlier biological concentration.</strong> Yielding $250K in annual savings through completion of process validation (OQ/PQ). Improvements include:
+                <ul style="list-style:none; margin-top:8px; padding-left:16px;">
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Designed (SolidWorks) a biocompatible press-fit alignment fixture to eliminate substrate yaw.</li>
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Executed PID adjustments (Ziegler-Nicholas method) to stabilize the electromechanical dispense system.</li>
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Optimized nozzle pressure (test method development) to achieve a narrower, controlled spray pattern.</li>
+                </ul>
+              </li>
+              <li><strong>Led feasibility study and process validation for a new campaign manufacturing process,</strong> increasing daily production capacity by 200%.
+                <ul style="list-style:none; margin-top:8px; padding-left:16px;">
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Led cross-functional feasibility testing (test method development, execution, statistical analysis, documentation).</li>
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Led performance qualification (protocol/report generation, change order process in eQMS).</li>
+                  <li style="padding:4px 0 4px 16px; font-size:12px; color:var(--mid); position:relative;"><span style="position:absolute;left:0;color:var(--accent);">→</span> Executed document redlines (MP, WI, DHR) and conducted operator training.</li>
+                </ul>
+              </li>
+              <li><strong>Led cross-functional risk assessment for raw material utilization change,</strong> reducing lot scrap rate from 23.1% to 3.5% (~85% reduction), yielding ~$98K in annual savings.</li>
+              <li><strong>Primary sustaining engineering lead for biologics production:</strong> coordinating with third-party vendors to resolve equipment failures (pumps, autoclaves, fridges) and performing GDP audits for manufacturing DHRs and forms.</li>
+</ul>
           </div>
         </div>
 
         <div class="exp-item reveal">
           <div class="exp-meta">
             <div class="exp-period">September 2023 — March 2026</div>
-            <div class="exp-company">Advanced Sterilization Products · Greater Los Angeles Area</div>
+            <div class="exp-company">Advanced Sterilization Products · Irvine, CA</div>
           </div>
           <div>
             <div class="exp-title">Manufacturing Engineer I</div>
             <ul class="exp-bullets">
-              <li><strong>Led an R&D VAVE initiative</strong> for consumables packaging tape, achieving a 75% reduction in lead time and $70K in annual savings by evaluating alternatives, conducting ISTA 2A/IATA DGR testing and releasing a comparative analysis report.</li>
-              <li><strong>Designed and verified a new passivated autoclave rack, increasing usage cases by 20% and eliminating beam deflection.</strong> Performed worst-case steam penetration analysis and verification testing to ensure sterilization efficacy.</li>
+              <li><strong>Designed (SolidWorks) and executed design verification testing for new passivated autoclave rack,</strong> increasing usage cases by 20% and eliminating beam deflection.</li>
+              <li><strong>Led an R&amp;D VAVE initiative</strong> for consumables packaging tape, achieving a 75% reduction in lead time and $70K in annual savings by evaluating alternatives, conducting ISTA 2A/IATA DGR mechanical stress testing and releasing a comparative analysis report.</li>
               <li><strong>Investigated 30+ manufacturing nonconformances under a regulated eQMS (21 CFR Part 820, ISO 13485),</strong> saving $100K in scrap and preventing multiple production shutdowns through cross-functional executions of planned deviations, heightened inspections, 100% part inspection, sort/reworks, and product dispositions.</li>
               <li><strong>Led executions of five IQ/OQ equipment validation protocols</strong> using a Kaye Validator data acquisition system to qualify variable temperature and humidity assets, increasing maximum production capacity by 30%.</li>
               <li><strong>Supported electromechanical biological indicator manufacturing</strong> by troubleshooting machine faults, performing robotic arm calibrations, and driving issue resolution through cross-functional production meetings.</li>
-            </ul>
+</ul>
           </div>
         </div>
 
@@ -771,7 +856,7 @@
   <section id="education">
     <div class="section-inner">
       <div class="section-header reveal">
-        <span class="section-num">04 //</span>
+        <span class="section-num">06 //</span>
         <h2 class="section-title">Education</h2>
       </div>
       <div class="edu-grid">
@@ -779,27 +864,28 @@
           <div class="edu-degree">B.S. Biomedical Engineering</div>
           <div class="edu-school">University of California, Davis &nbsp;·&nbsp; 2023</div>
           <div style="font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase; margin: 8px 0 16px;">Specialization in Medical Devices</div>
-          <div class="edu-notes">
-            <div style="margin-bottom:10px; font-size:11px; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase;">Relevant Coursework</div>
-            <ul style="list-style:none;">
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Biomechanics, Materials Science & Physiology</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Circuitry & Electronics</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Coding — Python & MATLAB</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Thermodynamics & Mechanical Engineering Fundamentals</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Medical Device Design & Engineering Design Controls</li>
-            </ul>
-          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" style="background:var(--bg);">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <span class="section-num">07 //</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="edu-grid">
         <div class="edu-card reveal">
-          <div class="edu-degree">Certifications & Training</div>
+          <div class="edu-degree">Certifications &amp; Training</div>
           <div class="edu-notes">
-            <div style="margin-bottom:6px; font-size:11px; color:var(--accent); letter-spacing:0.1em; text-transform:uppercase;">Issued by Pathwise</div>
-            <ul style="list-style:none; margin-top:4px;">
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Technical Writing Principles</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Root Cause Investigations</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; border-bottom:1px solid var(--border); line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Writing Standard Operating Procedures</li>
-              <li style="font-size:12px; color:var(--mid); padding:5px 0 5px 14px; position:relative; line-height:1.6;"><span style="position:absolute;left:0;color:var(--accent);">—</span> Documenting Investigations</li>
-            </ul>
+            <div>
+              <div style="font-size:13px; color:var(--text); font-weight:600; margin-bottom:6px;">Certified Lean Six Sigma Green Belt</div>
+              <div style="font-size:11px; color:var(--mid); margin-bottom:12px;">ASQ</div>
+              <div style="font-size:11px; color:var(--muted); margin-bottom:4px;">Credential ID: <span style="color:var(--mid);">28558</span></div>
+              <a href="https://credentials.asq.org/adff0fff-be58-44d6-958f-c2dc5e3a764c#acc.NhkHfYR8" target="_blank" style="display:inline-block; margin-top:10px; padding:8px 16px; border:1px solid var(--accent); color:var(--accent); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s, color 0.2s;" onmouseover="this.style.background='var(--accent)';this.style.color='#f5f1e8'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">View Certificate ↗</a>
+            </div>
           </div>
         </div>
       </div>
@@ -832,7 +918,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2025 Chandrish Sharma</span>
+    <span>© 2026 Chandrish Sharma</span>
     <span>Medical Device Engineer</span>
     
   </footer>
