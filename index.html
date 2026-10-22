@@ -590,7 +590,7 @@
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <div class="slideshow" id="rccar-slides" style="display:flex; transition:transform 0.4s ease; height:100%;">
-              <img src="rc car picture.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('rc car picture.png')">
+              <img src="rc%20car%20picture.png" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('rc%20car%20picture.png')">
               <video src="rc car demonstration.mp4" style="min-width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:pointer;" controls></video>
             </div>
             <button onclick="slideShow('rccar-slides', -1)" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:16px;">&#8592;</button>
@@ -601,7 +601,7 @@
             </div>
           </div>
           <div class="project-num">P1</div>
-          <div class="project-title">4-Motor Line-Following RC Car</div>
+          <div class="project-title">Line-Following RC Car</div>
           <p class="project-desc">
             Built a 4-motor Arduino-based line-following robot. Configured power distribution across a microcontroller, L293D motor driver, and IR sensor array. Diagnosed and resolved hardware faults including wiring issues, voltage drop, and driver-library compatibility through systematic testing.
           </p>
@@ -616,6 +616,12 @@
           </p>
           <p class="project-desc" style="margin-top:8px;">
             <strong style="color:var(--text);">3.</strong> Motors were not receiving enough power to turn. The original power source did not account for the saturation voltage drop across the L293D motor driver, meaning the voltage available at the motors fell below the minimum needed for rotation. Increasing the supply voltage provided enough headroom to exceed the driver's saturation voltage, allowing the motors to operate correctly.
+          </p>
+          <p class="project-desc" style="margin-top:16px;">
+            <strong style="color:var(--text);">Key Engineering Challenges:</strong>
+          </p>
+          <p class="project-desc" style="margin-top:8px;">
+            <strong style="color:var(--text);">1.</strong> Sourcing compatible power components required significant research. The servos needed a power distribution block rated for the correct amperage and voltage, which took time to identify. This also required a barrel jack adapter to step down wall AC power to the DC voltage the servos needed, and a screw terminal barrel jack adapter to properly couple the AC adapter to the power distribution block — each component had to be verified for compatibility before the system could be powered safely.
           </p>
           <p class="project-desc" style="margin-top:16px;">
             <strong style="color:var(--text);">Components:</strong>
@@ -654,12 +660,6 @@
             <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; border-bottom:1px solid var(--border); line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">5V/10A Power Distribution Block</strong> — rated to handle the worst-case power draw, calculated by summing the stall currents of all servos simultaneously.</li>
             <li style="font-size:12px; color:var(--mid); padding:6px 0 6px 20px; position:relative; line-height:1.7;"><span style="position:absolute;left:0;color:var(--accent);">→</span> <strong style="color:var(--text);">5V/10A Screw Terminal Barrel Jack Adapter</strong> — used to couple the AC wall adapter to the power distribution block, matched to the same voltage and current rating to avoid a bottleneck in the power chain.</li>
           </ul>
-          <p class="project-desc" style="margin-top:16px;">
-            <strong style="color:var(--text);">Key Engineering Challenges:</strong>
-          </p>
-          <p class="project-desc" style="margin-top:8px;">
-            <strong style="color:var(--text);">1.</strong> Sourcing compatible power components required significant research. The servos needed a power distribution block rated for the correct amperage and voltage, which took time to identify. This also required a barrel jack adapter to step down wall AC power to the DC voltage the servos needed, and a screw terminal barrel jack adapter to properly couple the AC adapter to the power distribution block — each component had to be verified for compatibility before the system could be powered safely.
-          </p>
           <div class="project-tags">
             <span class="tag">SolidWorks</span>
             <span class="tag">Arduino</span>
@@ -763,7 +763,7 @@
         <span class="section-num">04 //</span>
         <h2 class="section-title">Senior Design Project</h2>
       </div>
-      <div class="projects-grid">
+      <div class="projects-grid" style="grid-template-columns: 1fr;">
         <div class="project-card reveal">
           <div class="project-img" style="position:relative; height:220px; overflow:hidden;">
             <img src="senior design poster.png" style="width:100%; height:100%; object-fit:contain; background:#ece6d8; cursor:zoom-in;" onclick="openLightbox('senior design poster.png')">
